@@ -1,7 +1,5 @@
-import org.multiply.processing.TimedEventGenerator;
-
-int iWidth = 1024;
-int iHeight = 768;
+int iWidth = 1280;
+int iHeight = 600;
 
 SpaceShip ship;
 int shipVelocity = 15;
