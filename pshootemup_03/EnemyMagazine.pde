@@ -11,7 +11,7 @@ class EnemyMagazine {
     for (int i = 0; i < missiles.size(); i++) {
       missile = (EnemyMissile) missiles.get(i);
 
-      if (!missile.finished) {
+      if (!missile.dead) {
         missile.draw();
       }
     }
@@ -34,7 +34,7 @@ class EnemyMagazine {
       missile.position.x -= enemyMissileVelocity;
 
       if (missile.position.x < 0) {
-        missile.finished = true;
+        missile.dead = true;
       }
     }
   }
@@ -45,7 +45,7 @@ class EnemyMagazine {
     for (int i = missiles.size() - 1; i >= 0; i--) {
       missile = (EnemyMissile) missiles.get(i);
 
-      if (missile.finished) {
+      if (missile.dead) {
         missiles.remove(i);
       }
     }

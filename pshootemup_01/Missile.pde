@@ -3,14 +3,14 @@ class Missile {
   int height;
   PVector position;
   PGraphics pg;
-  boolean finished;
+  boolean dead;
 
   Missile() {
     width = 40;
     height = 4;
     position = new PVector();
     pg = createGraphics(width, height, P2D);
-    finished = false;
+    dead = false;
 
     pg.beginDraw();
       pg.fill(255);

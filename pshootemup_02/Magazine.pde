@@ -13,7 +13,7 @@ class Magazine {
     for (int i = 0; i < missiles.size(); i++) {
       missile = (Missile) missiles.get(i);
 
-      if (!missile.finished) {
+      if (!missile.dead) {
         missile.draw();
       }
     }
@@ -39,7 +39,7 @@ class Magazine {
       missile.position.x += missileVelocity;
 
       if (missile.position.x > width) {
-        missile.finished = true;
+        missile.dead = true;
       }
     }
   }
@@ -50,7 +50,7 @@ class Magazine {
     for (int i = missiles.size() - 1; i >= 0; i--) {
       missile = (Missile) missiles.get(i);
 
-      if (missile.finished) {
+      if (missile.dead) {
         missiles.remove(i);
       }
     }

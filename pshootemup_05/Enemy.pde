@@ -1,4 +1,4 @@
-class SpaceShip {
+class Enemy {
   PImage img;
   int width;
   int height;
@@ -6,8 +6,8 @@ class SpaceShip {
   PGraphics pg;
   boolean dead;
 
-  SpaceShip() {
-    img = loadImage("playerShip1_blue.png");
+  Enemy() {
+    img = loadImage("enemyBlack1.png");
     width = img.height;
     height = img.width;
     position = new PVector();

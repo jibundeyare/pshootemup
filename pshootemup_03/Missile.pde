@@ -4,7 +4,7 @@ class Missile {
   int height;
   PVector position;
   PGraphics pg;
-  boolean finished;
+  boolean dead;
 
   Missile() {
     img = loadImage("laserBlue01.png");
@@ -12,7 +12,7 @@ class Missile {
     height = img.width;
     position = new PVector();
     pg = createGraphics(width, height, P2D);
-    finished = false;
+    dead = false;
 
     pg.beginDraw();
       pg.translate(width, 0);

@@ -4,7 +4,7 @@ class EnemyMissile {
   int height;
   PVector position;
   PGraphics pg;
-  boolean finished;
+  boolean dead;
 
   EnemyMissile() {
     img = loadImage("laserRed01.png");
@@ -12,7 +12,7 @@ class EnemyMissile {
     height = img.width;
     position = new PVector();
     pg = createGraphics(width, height, P2D);
-    finished = false;
+    dead = false;
 
     pg.beginDraw();
       pg.translate(0, height);
