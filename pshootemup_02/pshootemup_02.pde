@@ -7,6 +7,8 @@ int shipVelocity = 15;
 Magazine magazine;
 int missileVelocity = 20;
 
+int missileHeight = 9;
+
 void setup() {
   size(iWidth, iHeight, P3D);
 
@@ -54,7 +56,8 @@ void keyPressed() {
     }
   } else {
     if (keyCode == ' ') {
-      magazine.fire(ship.position);
+      PVector firePosition = new PVector(ship.position.x + ship.width, ship.position.y + (ship.height / 2 - missileHeight / 2));
+      magazine.fire(firePosition);
       println("magazine.size: " + magazine.size);
     }
   }

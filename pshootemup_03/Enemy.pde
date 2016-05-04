@@ -1,21 +1,23 @@
-class Missile {
+class Enemy {
+  PImage img;
   int width;
   int height;
   PVector position;
   PGraphics pg;
-  boolean finished;
+  boolean dead;
 
-  Missile() {
-    width = 40;
-    height = 4;
+  Enemy() {
+    img = loadImage("enemyBlack1.png");
+    width = img.height;
+    height = img.width;
     position = new PVector();
     pg = createGraphics(width, height, P2D);
-    finished = false;
+    dead = false;
 
     pg.beginDraw();
-      pg.fill(255);
-      pg.noStroke();
-      pg.rect(0, 0, pg.width, pg.height);
+      pg.translate(width, 0);
+      pg.rotate(HALF_PI);
+      pg.image(img, 0, 0);
     pg.endDraw();
   }
 

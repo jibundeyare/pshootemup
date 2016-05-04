@@ -1,6 +1,5 @@
 class Magazine {
   int size;
-  int remaining;
   ArrayList missiles;
 
   Magazine() {
