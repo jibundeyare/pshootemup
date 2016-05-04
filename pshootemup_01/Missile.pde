@@ -21,9 +21,8 @@ class Missile {
 
   void draw() {
     pushMatrix();
-    // @info 50 = ship.width
-    // @info 13 = ship.height / 2 - height / 2
-    translate(position.x + 50, position.y + 13);
+    // @info 50 = ship.width and 30 = ship.height
+    translate(position.x + 50, position.y + (30 / 2.0 - height / 2.0));
     image(pg, 0, 0);
     popMatrix();
   }
